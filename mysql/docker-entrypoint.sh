@@ -18,6 +18,7 @@ else
     else
         echo "running mysqldump --max_allowed_packet=1073741824 --host $HOST --port $PORT -u$USER -p$PASSWORD $DBNAME > $DBNAME.sql"
         exec mysqldump --max_allowed_packet=1073741824 --host $HOST --port $PORT -u$USER -p$PASSWORD $DBNAME > $DBNAME.sql
+        cp backup=numbered *.sql /mnt/winshare
         echo "done"
     fi
 fi
